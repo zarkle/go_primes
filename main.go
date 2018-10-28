@@ -33,3 +33,6 @@ func main() {
 		}
 	}
 }
+
+// https://github.com/grandquista/primes/blob/master/primes.go
+// need to use chan (see adam's code) to make the program only show prime numbers
