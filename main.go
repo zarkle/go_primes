@@ -21,10 +21,15 @@ func main() {
 	flag.UintVar(&start, "start", 0, "usage")
 	flag.UintVar(&end, "end", 10, "usage")
 	flag.Parse()
-
-	for i := start; i < end; i++ {
-		if isPrime(i) {
-			log.Println(i)
+	primes := make([]uint, end)
+	for prime := range primes {
+		primes[prime] = uint(prime)
+	}
+	for prime := range primes {
+		if isPrime(primes[prime]) {
+			if primes[prime] >= start {
+				log.Println(prime)
+			}
 		}
 	}
 }
